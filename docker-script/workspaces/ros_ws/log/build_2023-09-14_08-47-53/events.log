@@ -1,0 +1,75 @@
+[0.000000] (-) TimerEvent: {}
+[0.000710] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict()}
+[0.000780] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.009398] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'cmake'}
+[0.009914] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'build'}
+[0.010360] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wia/ros/ros_ws/build/cpp_pubsub', '--', '-j16', '-l16'], 'cwd': '/home/wia/ros/ros_ws/build/cpp_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HOSTNAME', 'b96c7352baf3'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/wia'), ('OLDPWD', '/script'), ('ROS_PYTHON_VERSION', '3'), ('S_INIT_APT_SH', 'system_init_apt.sh'), ('LC_CTYPE', 'C.UTF-8'), ('_colcon_cd_root', '/opt/ros/galactic/'), ('ROS_DISTRO', 'galactic'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('S_INIT_USER_SH', 'system_init_user.sh'), ('DISPLAY', ':2'), ('S_INIT_ROS_SH', 'system_init_ros.sh'), ('XAUTHORITY', '/tmp/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/galactic'), ('DEBIAN_FRONTEND', 'interactive'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/wia/ros/ros_ws/build/cpp_pubsub'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('TZ', 'Etc/UTC'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/galactic')]), 'shell': False}
+[0.048491] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.067750] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099834] (-) TimerEvent: {}
+[0.132035] (cpp_pubsub) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.188596] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.192145] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.199916] (-) TimerEvent: {}
+[0.300166] (-) TimerEvent: {}
+[0.317045] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.358303] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[0.359430] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.373681] (cpp_pubsub) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.400268] (-) TimerEvent: {}
+[0.500556] (-) TimerEvent: {}
+[0.561597] (cpp_pubsub) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.571342] (cpp_pubsub) StdoutLine: {'line': b'-- Generating done\n'}
+[0.572515] (cpp_pubsub) StdoutLine: {'line': b'-- Build files have been written to: /home/wia/ros/ros_ws/build/cpp_pubsub\n'}
+[0.590673] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_listener\x1b[0m\n'}
+[0.591506] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_talker\x1b[0m\n'}
+[0.598227] (cpp_pubsub) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/custom_listener.dir/src/subscriber_custom_node.cpp.o\x1b[0m\n'}
+[0.600623] (-) TimerEvent: {}
+[0.603927] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] Built target talker\n'}
+[0.605074] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wia/ros/ros_ws/src/cpp_pubsub/src/subscriber_custom_node.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Krclcpp/rclcpp.hpp: No such file or directory\n'}
+[0.605224] (cpp_pubsub) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"rclcpp/rclcpp.hpp"\x1b[m\x1b[K\n'}
+[0.605309] (cpp_pubsub) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.605378] (cpp_pubsub) StderrLine: {'line': b'compilation terminated.\n'}
+[0.605933] (cpp_pubsub) StderrLine: {'line': b'make[2]: *** [CMakeFiles/custom_listener.dir/build.make:63: CMakeFiles/custom_listener.dir/src/subscriber_custom_node.cpp.o] Error 1\n'}
+[0.606042] (cpp_pubsub) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/custom_listener.dir/all] Error 2\n'}
+[0.606110] (cpp_pubsub) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[0.614551] (cpp_pubsub) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/custom_talker.dir/src/publisher_custom_node.cpp.o\x1b[0m\n'}
+[0.700761] (-) TimerEvent: {}
+[0.801072] (-) TimerEvent: {}
+[0.901388] (-) TimerEvent: {}
+[1.001707] (-) TimerEvent: {}
+[1.102059] (-) TimerEvent: {}
+[1.202388] (-) TimerEvent: {}
+[1.302705] (-) TimerEvent: {}
+[1.403010] (-) TimerEvent: {}
+[1.503308] (-) TimerEvent: {}
+[1.603589] (-) TimerEvent: {}
+[1.703912] (-) TimerEvent: {}
+[1.804267] (-) TimerEvent: {}
+[1.904771] (-) TimerEvent: {}
+[2.005306] (-) TimerEvent: {}
+[2.105620] (-) TimerEvent: {}
+[2.205936] (-) TimerEvent: {}
+[2.306242] (-) TimerEvent: {}
+[2.406537] (-) TimerEvent: {}
+[2.506850] (-) TimerEvent: {}
+[2.607166] (-) TimerEvent: {}
+[2.707475] (-) TimerEvent: {}
+[2.807793] (-) TimerEvent: {}
+[2.908086] (-) TimerEvent: {}
+[3.008381] (-) TimerEvent: {}
+[3.108681] (-) TimerEvent: {}
+[3.209029] (-) TimerEvent: {}
+[3.309326] (-) TimerEvent: {}
+[3.409650] (-) TimerEvent: {}
+[3.509958] (-) TimerEvent: {}
+[3.610257] (-) TimerEvent: {}
+[3.710623] (-) TimerEvent: {}
+[3.810468] (cpp_pubsub) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable custom_talker\x1b[0m\n'}
+[3.810838] (-) TimerEvent: {}
+[3.911176] (-) TimerEvent: {}
+[3.952737] (cpp_pubsub) StdoutLine: {'line': b'[ 83%] Built target custom_talker\n'}
+[3.953485] (cpp_pubsub) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[3.955450] (cpp_pubsub) CommandEnded: {'returncode': 2}
+[3.994014] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 2}
+[4.004808] (-) EventReactorShutdown: {}

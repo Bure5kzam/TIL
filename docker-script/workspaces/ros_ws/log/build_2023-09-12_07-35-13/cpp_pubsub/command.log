@@ -1,0 +1,6 @@
+Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/wia/ros/ros_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/wia/ros/ros_ws/install/cpp_pubsub
+Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/wia/ros/ros_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/wia/ros/ros_ws/install/cpp_pubsub
+Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16
+Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16
+Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/wia/ros/ros_ws/build/cpp_pubsub
+Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/wia/ros/ros_ws/build/cpp_pubsub

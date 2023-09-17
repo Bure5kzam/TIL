@@ -1,0 +1,24 @@
+services:
+  amr:
+    <<: &common_settings
+      image: ros-galactic
+      container_name: amr
+      environment:
+        - DISPLAY
+        - XAUTHORITY=/tmp/.Xauthority
+        - DEBIAN_FRONTEND=interactive
+      ports:
+        - "8000:5000"
+      volumes:
+        - ${workspace}:/src
+        - /tmp/.X11-unix:/tmp/.X11-unix:rw
+        - ~/.Xauthority:/tmp/.Xauthority
+      entrypoint: /bin/bash
+      privileged: true
+      stdin_open: true
+      tty: true
+
+  ampr:
+    <<: *common_settings
+    image: ros-humble
+    container_name: ampr

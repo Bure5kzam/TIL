@@ -1,0 +1,11 @@
+services:
+  ompr:
+    image: tros 
+    container_name: ompr
+
+    ports:
+      - "8000:5000"
+
+    volumes:
+      - ${PCS_SYSTEM_PATH}:/src
+

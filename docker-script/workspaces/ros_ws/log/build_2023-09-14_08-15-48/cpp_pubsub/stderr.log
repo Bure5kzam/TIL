@@ -1,0 +1,10 @@
+[01m[K/home/wia/ros/ros_ws/src/cpp_pubsub/src/custom_node.cpp:[m[K In constructor ‘[01m[KCustomNode::CustomNode()[m[K’:
+[01m[K/home/wia/ros/ros_ws/src/cpp_pubsub/src/custom_node.cpp:9:57:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid CustomNode::timer_callback()[m[K’
+    9 |       timer_ = this->create_wall_timer(500ms, std::bind([01;31m[Ktimer_callback[m[K, this));
+      |                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/wia/ros/ros_ws/src/cpp_pubsub/src/custom_node.cpp:13:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   13 |     void [01;36m[Ktimer_callback[m[K() {
+      |          [01;36m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/custom_talker.dir/build.make:63: CMakeFiles/custom_talker.dir/src/custom_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/custom_talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

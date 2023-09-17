@@ -1,0 +1,27 @@
+[0.013s] Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16
+[0.036s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.057s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.114s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.144s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.147s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.275s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.320s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.321s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.337s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.522s] -- Configuring done
+[0.523s] CMake Error at CMakeLists.txt:17 (add_executable):
+[0.523s]   Cannot find source file:
+[0.523s] 
+[0.523s]     src/minimal_publisher.cpp
+[0.523s] 
+[0.523s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[0.523s]   .hpp .hxx .in .txx
+[0.523s] 
+[0.523s] 
+[0.523s] CMake Error at CMakeLists.txt:17 (add_executable):
+[0.523s]   No SOURCES given to target: talker
+[0.523s] 
+[0.524s] 
+[0.524s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[0.528s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.530s] Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16

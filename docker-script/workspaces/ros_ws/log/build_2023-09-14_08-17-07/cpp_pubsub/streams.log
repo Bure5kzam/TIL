@@ -1,0 +1,28 @@
+[0.011s] Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16
+[0.051s] [35m[1mScanning dependencies of target custom_talker[0m
+[0.065s] [ 50%] Built target talker
+[0.074s] [ 75%] [32mBuilding CXX object CMakeFiles/custom_talker.dir/src/custom_node.cpp.o[0m
+[3.521s] [100%] [32m[1mLinking CXX executable custom_talker[0m
+[3.651s] [100%] Built target custom_talker
+[3.662s] Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/wia/ros/ros_ws/build/cpp_pubsub -- -j16 -l16
+[3.687s] Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/wia/ros/ros_ws/build/cpp_pubsub
+[3.693s] -- Install configuration: ""
+[3.693s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[3.693s] -- Installing: /home/wia/ros/ros_ws/install/cpp_pubsub/lib/cpp_pubsub/custom_talker
+[3.694s] -- Set runtime path of "/home/wia/ros/ros_ws/install/cpp_pubsub/lib/cpp_pubsub/custom_talker" to ""
+[3.694s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[3.694s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[3.695s] -- Installing: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[3.695s] -- Up-to-date: /home/wia/ros/ros_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[3.696s] Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/wia/ros/ros_ws/build/cpp_pubsub

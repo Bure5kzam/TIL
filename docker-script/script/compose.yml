@@ -1,0 +1,53 @@
+services:
+  amr:
+    container_name: amr
+    image: ros-galactic:latest
+    build:
+      context: ./galactic
+      dockerfile: ./Dockerfile
+      args:
+        - "VM_UID=${HOST_UID}"
+        - "VM_GID=${HOST_GID}"
+
+    <<: &common_settings
+      environment:
+        - DISPLAY
+        - XAUTHORITY=/tmp/.Xauthority
+        - DEBIAN_FRONTEND=interactive
+      entrypoint: /bin/bash
+      privileged: true
+      #stdin_open: true
+      tty: true
+
+    volumes:
+      - ${WORKSPACES}:/home/wia/ros/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/tmp/.Xauthority
+      - ${ROS_DEFAULT}/galactic:/mnt/opt/ros/galactic
+    command:
+      - -c
+      - |
+        sudo chown -R wia:wia /home/wia/ros/
+        sudo cp -r /opt/ros/galactic/* /mnt/opt/ros/galactic/
+        /bin/bash
+    restart: always
+
+  ampr:
+    container_name: ampr
+    image: ros-humble:latest
+    build:
+      context: ./humble
+      dockerfile: ./Dockerfile
+
+    <<: *common_settings
+
+    volumes:
+      - ${WORKSPACES}:/ros/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/tmp/.Xauthority
+      - ${ROS_DEFAULT}/humble:/mnt/opt/ros/humble
+    command:
+      - -c
+      - |
+        sudo cp -r /opt/ros/humble/* /mnt/opt/ros/humble/
+        /bin/bash

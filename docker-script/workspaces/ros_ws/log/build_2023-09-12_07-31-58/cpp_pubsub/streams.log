@@ -1,0 +1,37 @@
+[0.011s] Invoking command in '/home/wia/ros/ros_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/wia/ros/ros_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/wia/ros/ros_ws/install/cpp_pubsub
+[0.021s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.047s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.122s] -- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.168s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.176s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.243s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.269s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.345s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.402s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.405s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.421s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.421s] -- Looking for pthread.h
+[0.496s] -- Looking for pthread.h - found
+[0.496s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.571s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.571s] -- Looking for pthread_create in pthreads
+[0.624s] -- Looking for pthread_create in pthreads - not found
+[0.624s] -- Looking for pthread_create in pthread
+[0.672s] -- Looking for pthread_create in pthread - found
+[0.673s] -- Found Threads: TRUE  
+[0.876s] -- Configuring done
+[0.877s] CMake Error at CMakeLists.txt:17 (add_executable):
+[0.877s]   Cannot find source file:
+[0.877s] 
+[0.877s]     src/publisher_member_function.cpp
+[0.877s] 
+[0.877s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[0.877s]   .hpp .hxx .in .txx
+[0.877s] 
+[0.877s] 
+[0.877s] CMake Error at CMakeLists.txt:17 (add_executable):
+[0.877s]   No SOURCES given to target: talker
+[0.877s] 
+[0.877s] 
+[0.877s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[0.882s] Invoked command in '/home/wia/ros/ros_ws/build/cpp_pubsub' returned '1': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/wia/ros/ros_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/wia/ros/ros_ws/install/cpp_pubsub

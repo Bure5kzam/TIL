@@ -1,0 +1,22 @@
+services:
+  arm:
+    image: ros-foxy
+    container_name: amr
+
+    environment:
+      - DISPLA
+      - XAUTHORITY=/tmp/.Xauthority
+      - DEBIAN_FRONTEND=interactive
+
+    ports:
+      - "8000:5000"
+
+    volumes:
+      - ${workspace}:/src
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ~/.Xauthority:/tmp/.Xauthority
+
+    entrypoint: /bin/bash
+    privileged: true
+    stdin_open: true          # 컨테이너가 표준 입력을 받을 수 있도록 설정합니다.
+    tty: true
