@@ -1,0 +1,107 @@
+
+action 서버는 목표(Goal)을 전달하면 정기적으로 데이터를 반환하고 (Feedback) 결과 (Result) 를 반환함
+
+```c++
+#include "rclcpp/rclcpp.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
+#include "rclcpp_components/register_node_macro.hpp"
+#include "action_tutorials_interfaces/action/fibonacci.hpp"
+namespace action_tutorials_cpp
+{
+  class FibonacciActionServer: public rclcpp::Node {
+    public:
+
+      // 사용할 인터페이스를 네임스페이스로 지정
+      using Fibonacci = action_tutorials_interfaces::action::Fibonacci;
+
+      /// @brief 액션 서버의 동작 진행 상태에 대한 정보를 갖는 객체.
+      ///         액션 서버의 캔슬 여부, 캔슬 결과 정보와, 피드백 발행 메서드 등을 가짐.
+      using GoalHandleFibonacci = rclcpp_action::ServerGoalHandle<Fibonacci>;
+
+      explicit FibonacciActionServer (const rclcpp::NodeOptions options) : rclcpp::Node("fibonacci_action_server", options) {
+        using namespace std::placeholders;
+
+        this->action_server_ = rclcpp_action::create_server<Fibonacci>(
+          this,
+          "fibonacci",
+          std::bind(&FibonacciActionServer::handle_goal, this, _1, _2),
+          std::bind(&FibonacciActionServer::cancle_callback, this, _1),
+          std::bind(&FibonacciActionServer::accept_callback, this, _1)
+          );
+      }
+    private:
+      rclcpp_action::Server<Fibonacci>::SharedPtr action_server_;
+
+      /// @brief // Action 서버에 처음 Goal을 전달했을 때 동작하는 메서드. 요청에 대한 처리결과를 반환.
+      /// @param UUID Goal의 UUID
+      /// @param goal Goal 관련 데이터가 담긴 객체
+      /// @return
+      rclcpp_action::GoalResponse handle_goal(
+        const rclcpp_action::GoalUUID & UUID,
+        std::shared_ptr<const Fibonacci::Goal> goal)
+      {
+        RCLCPP_INFO(this->get_logger(), "Received goal request with order %d", goal->order);
+        (void)UUID;
+        return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+      }
+
+      /// @brief Action 서버에 Cancel 요청이 있을 때 동작하는 메서드. Cancel에 대하 처리결과를 반환.
+      /// @param goal_handle 액션 서버의 진행 상태를 갖는 Goal 핸들 객체
+      /// @return
+      rclcpp_action::CancelResponse cancle_callback(
+        const std::shared_ptr<GoalHandleFibonacci> goal_handle)
+      {
+        RCLCPP_INFO(this->get_logger(), "Received request to cancel goal");
+        (void)goal_handle;
+        return rclcpp_action::CancelResponse::ACCEPT;
+      }
+
+      /// @brief Action 서버에 동작을 요청했을 때 실행되는 메서드.
+      /// @param goal_handle 액션 서버의 진행 상태 객체
+      void accept_callback(const std::shared_ptr<GoalHandleFibonacci> goal_handle) {
+        using namespace std::placeholders;
+
+        std::thread{std::bind(execute, this, _1), goal_handle}.detach();
+      }
+
+      /// @brief 액션 서버 동작 시 실제 연산을 비동기로 수행하는 메서드.
+      /// @param goal_handle 액션 서버의 진행 상태 객체
+      void execute(std::shared_ptr<GoalHandleFibonacci> goal_handle) {
+        RCLCPP_INFO(this->get_logger(), "Executing goal");
+
+        rclcpp::Rate loop_rate(1);
+        const auto goal = goal_handle->get_goal();
+        auto feedback = std::make_shared<Fibonacci::Feedback>();
+        auto &sequence = feedback->partial_sequence;
+        auto result = std::make_shared<Fibonacci::Result>();
+
+        sequence.push_back(0);
+        sequence.push_back(1);
+
+        for(int i = 1; i < goal->order; i++) {
+          if(goal_handle->is_canceling()) {
+            result->sequence = sequence;
+            goal_handle->canceled(result);
+            RCLCPP_INFO(this->get_logger(), "Goal canceled");
+            return;
+          }
+
+          sequence.push_back(sequence[i] + sequence[i-1]);
+          goal_handle->publish_feedback(feedback);
+          RCLCPP_INFO(this->get_logger(), "Publish feedback");
+
+          loop_rate.sleep();
+        }
+
+        if(rclcpp::ok()) {
+          result->sequence = sequence;
+          goal_handle->succeed(result);
+          RCLCPP_INFO(this->get_logger(), "Goal succeeded");
+        }
+      }
+  };
+}
+
+RCLCPP_COMPONENTS_REGISTER_NODE(action_tutorials_cpp::FibonacciActionServer);
+
+```
