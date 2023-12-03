@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 우분투 로그 (rsyslog)
-date: 2023-12-04 21:52
+date: 2023-12-03 21:52
 category: LinuxMaster
 ---
 
