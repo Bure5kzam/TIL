@@ -1,0 +1,31 @@
+---
+layout: post
+title: python functools로 매개변수가 다른 메소드 변환해서 사용하기
+date: 2024-03-14 20:54
+category: python
+author: Bure5kzam
+tags: []
+summary: 
+---
+
+
+```python
+import functools
+
+def func_origin(param1 , param2 ):
+    print(f"param1 : {param1}")
+    print(f"param2 : {param2}")
+
+
+func_origin("aa", "bb")  
+# 출력결과1
+# param1 : aa
+# param2 : bb
+
+func_default_param1 = functools.partial(func_origin, "default_param1")
+func_default_param1("this is new param2")
+# 출력결과2
+# param1 : default_param1
+# param2 : this is new param2
+
+```
