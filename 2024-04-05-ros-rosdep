@@ -1,0 +1,34 @@
+
+https://docs.ros.org/en/independent/api/rosdep/html/
+
+https://wiki.ros.org/rosdep/rosdep.yaml
+
+
+rosdep은 패키지의 의존성을 설치하는 도구다.
+
+의존성을 해결하려는 대상 패키지의 package.xml을 확인해서 의존성을 해결한다. [github의 ros/rosdistro/rosdep](https://github.com/ros/rosdistro/tree/master/rosdep) 에 온라인으로 저장된 rosdep 규칙에 따라 해결한다.
+
+(package.xml의 exec_depend에 있는 ros 패키지 이름으로 설치할 방법을 찾는 것 같다.)
+
+의존 패키지는 ros 재단?에서 공인된 저장소에 정의된 방식에 따라 설치되는데, 만약 사설 패키지 같은 경우는 등록되지 않아 의존관계가 해결되지 않을 수 있다.
+
+
+사설 패키지를 rosdep으로 설치하기 위해서는 
+1. 패키지의 위치를 나타내는 custom_rosdep.yaml을 직접 만들어줘야한다.
+2. rosdep에서 사용할 rosdep.yaml 리스트를 보유한 파일에 1.에서 만든 파일을 추가해줘야한다.
+	1. https://answers.ros.org/question/62756/install-rosdep-definition-locally-in-a-package/
+		1. rosdep.yaml 리스트 파일의 경로와 custom_rosdep.yaml을 지정하는 방법을 나타내고있다.
+3. custom_rosdep.yaml에서 패키지를 찾을 수 있는 올바른 경로를 지정해줘야한다.
+	1. rosdep.yaml의 양식을 참고해야한다.
+		1. https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+
+
+---
+
+패키지 전체 설치
+
+rosdep install --from-paths src --ignore-src
+
+패키지 의존성 상태 확인
+rosdep check --from-paths src --ignore-src
+
