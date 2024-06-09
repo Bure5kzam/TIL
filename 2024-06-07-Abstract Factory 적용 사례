@@ -1,0 +1,49 @@
+
+최근에 소스코드에 Abstract factory를 적용한 사례를 정리했다.
+
+# 개요
+
+`action`은 종류별로 다른 `ActionParam`, `Action_handling_node`, `action_thread`를 가진다.
+
+액션별로 다른 클래스가 필요하고, 새로운 액션을 생성할 때 필요한 객체들을 정리해두고 싶었는데, `abstract factory`를 적용해서 해결할 수 있었다.
+
+``` python
+class ActionAbstractFactory(ABC):
+	@handling_key_error
+	@abstractmethod
+	def create_param(param : dict):
+		pass
+	
+	  
+	@abstractmethod
+	def create_action_behavior(action_id : int , param : ActionTypeParamInterface):
+		pass
+	
+	  
+	
+	@abstractmethod
+	def create_action_handling_node(self, param : ActionImplHandlingNode):
+		pass
+	
+	  
+	
+	def create_action_thread(self, param : ActionTypeParamInterface):
+		pass
+
+```
+
+
+# 느낀 점
+
+## 왜 적용해야 할까?
+
+디자인 패턴을 적용하다보니 적합하지 않는 상황에 어거지로 적용하는 듯한 느낌을 받았다.
+
+그래서 곱절의 인터페이스를 생성해가면서까지 구차여 왜 적용해야 했는지, 만약 적용하지 않았다면 어떻게 되었을지를 생각해보기로 했다.
+
+이번 카테고리 하나가 다른 카테고리와 별개의 고유한 객체를 가지는 경우다. (하나의 `action`은 고유한 `parameter`, `behavior`, `handling_node`를 갖는다.
+
+나중에 유지보수 문제로 새롭게 액션을 추가해야하는 상황이 온다면, 액션을 만드는데 필요한 구성요소들을 파악해야 하는데, `추상 팩터리 매서드`패턴을 적용하지 않았다면 액션을 생성하는 소스코드에 접근해서 파악해야 한다. 이는 구성요소 누락 등의 실수로 이어질 위험이 있다.
+
+
+
